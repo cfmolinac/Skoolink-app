@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CalendarScreen from '../screens/CalendarScreen';
 import NotificationsScreen from '../screens/NotificationScreen';
 import FamilyGroupsScreen from '../screens/FamilyGroupsScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,7 @@ const BottomTabNavigator = () => (
       tabBarStyle: { borderTopLeftRadius: 16, borderTopRightRadius: 16 },
     }}
   >
+    <Tab.Screen name = "Home" component={HomeScreen} />
     <Tab.Screen name="Calendario" component={CalendarScreen} />
     <Tab.Screen name="Notificaciones" component={NotificationsScreen} />
     <Tab.Screen name="Familia" component={FamilyGroupsScreen} />
